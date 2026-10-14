@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "BAHRAM OS — مربی شخصی",
+  "short_name": "BAHRAM OS",
+  "description": "مربی شخصی برای برنامه‌ریزی، کار، زبان، سلامتی و پیشرفت",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#10130f",
+  "theme_color": "#121611",
+  "icons": [
+    {"src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}
+  ]
+}

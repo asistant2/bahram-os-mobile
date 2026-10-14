@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#121611">
+  <meta name="description" content="مربی شخصی بهرام برای برنامه‌ریزی روزانه، کار، زبان، سلامتی و پیشرفت. داده‌ها روی همین گوشی می‌مانند.">
+  <title>BAHRAM OS | مربی شخصی</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <style>
+  :root{color-scheme:dark;--bg:#10130f;--panel:#191e18;--panel2:#20271f;--line:#303a2e;--text:#f0f2e9;--muted:#a4ada0;--lime:#c5f36a;--lime2:#a8d74c;--orange:#ffb86b;--red:#ff8077;--radius:20px;--shadow:0 14px 36px #0003}
+  *{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 100% -15%,#334028 0,transparent 40%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;min-height:100dvh;padding-bottom:calc(88px + env(safe-area-inset-bottom));font-size:15px;line-height:1.55}
+  button,input,textarea,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+  .wrap{max-width:720px;margin:auto;padding:20px 16px 0}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}.brand{display:flex;align-items:center;gap:10px}.mark{width:42px;height:42px;border-radius:14px;background:var(--lime);color:#151a10;display:grid;place-items:center;font-weight:1000;font-size:18px;letter-spacing:-1px;box-shadow:0 6px 24px #c5f36a22}.brand-name{font-size:12px;letter-spacing:2px;font-weight:850;direction:ltr;text-align:right}.brand-sub{color:var(--muted);font-size:11px;margin-top:1px}.date-pill{border:1px solid var(--line);background:#141914c9;border-radius:999px;padding:7px 10px;font-size:11px;color:var(--muted);white-space:nowrap}
+  .hero{position:relative;overflow:hidden;padding:23px 21px 21px;border:1px solid #465237;border-radius:26px;background:linear-gradient(135deg,#28351f,#1a2117 68%,#182018);box-shadow:var(--shadow);margin-bottom:17px}.hero:after{content:"";position:absolute;width:170px;height:170px;left:-50px;top:-70px;border:1px solid #c5f36a22;border-radius:50%;box-shadow:0 0 0 22px #c5f36a0a,0 0 0 45px #c5f36a08;pointer-events:none}.eyebrow{font-size:11px;color:var(--lime);font-weight:800;letter-spacing:.7px;margin-bottom:7px}.hero h1{font-size:clamp(25px,6vw,34px);line-height:1.23;letter-spacing:-.7px;margin:0 0 9px;font-weight:900;max-width:460px}.hero p{margin:0;color:#c5cebd;font-size:13px;max-width:470px}.hero-bottom{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:21px;position:relative;z-index:1}.progress-copy{font-size:12px;color:#dbe4d1}.progress-copy b{color:var(--lime);font-size:18px;margin-left:4px}.progress-track{height:6px;background:#ffffff1c;border-radius:9px;margin-top:8px;overflow:hidden}.progress-fill{height:100%;width:0;background:var(--lime);border-radius:9px;transition:width .25s}.primary-btn{border:0;border-radius:14px;background:var(--lime);color:#17200e;padding:12px 16px;font-weight:900;white-space:nowrap;box-shadow:0 6px 18px #c5f36a20}.primary-btn:active{transform:scale(.98)}.secondary-btn,.ghost-btn,.small-btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:13px;padding:10px 12px;font-weight:750}.ghost-btn{background:transparent;color:var(--muted)}.small-btn{padding:7px 10px;font-size:12px}.section-head{display:flex;align-items:center;justify-content:space-between;margin:23px 2px 11px;gap:10px}.section-head h2{font-size:16px;margin:0;font-weight:850}.section-head span{font-size:11px;color:var(--muted)}.task-list{display:grid;gap:10px}.task{display:grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:start;gap:10px;padding:15px 13px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(135deg,#1a2019,#171c16);transition:border-color .15s}.task.done{opacity:.62;background:#151914}.check{width:25px;height:25px;border-radius:8px;border:1px solid #66745a;background:transparent;color:#1a2114;display:grid;place-items:center;margin-top:1px;font-weight:1000;padding:0}.task.done .check{background:var(--lime);border-color:var(--lime)}.task-title{font-size:14px;font-weight:790;line-height:1.42}.task.done .task-title{text-decoration:line-through;color:var(--muted)}.task-meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:7px;align-items:center}.tag{font-size:10px;border-radius:7px;padding:3px 7px;color:#c2cbbd;background:#283027}.tag.priority{color:var(--lime);background:#c5f36a13}.tag.carried{color:var(--orange);background:#ffb86b15}.task-mins{font-size:11px;color:var(--muted);white-space:nowrap;padding-top:3px}.task-more{display:flex;gap:6px;margin-top:9px}.task-more button{border:0;background:transparent;color:var(--muted);font-size:11px;padding:2px 5px}.empty{border:1px dashed var(--line);border-radius:17px;padding:20px;text-align:center;color:var(--muted);font-size:13px}.moved{margin-top:15px;padding:13px 14px;background:#171b16;border:1px dashed #4c5941;border-radius:15px}.moved summary{cursor:pointer;color:var(--muted);font-size:12px;font-weight:750}.moved .task{margin-top:9px}
+  .quick-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.quick{border:1px solid var(--line);border-radius:16px;background:#191f18;color:var(--text);padding:12px 5px 10px;display:flex;align-items:center;flex-direction:column;gap:6px;min-height:82px}.quick .q-icon{height:29px;min-width:29px;border-radius:10px;background:#c5f36a15;color:var(--lime);display:grid;place-items:center;font-size:16px;font-weight:850}.quick strong{font-size:11px}.quick small{color:var(--muted);font-size:10px}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.stat{padding:13px 12px;border-radius:17px;border:1px solid var(--line);background:var(--panel)}.stat .label{font-size:11px;color:var(--muted)}.stat .value{font-size:22px;font-weight:900;margin-top:3px;letter-spacing:-.5px}.stat .sub{font-size:10px;color:var(--muted);margin-top:2px}.note{display:flex;gap:11px;align-items:start;background:#1e241b;border:1px solid #3a4830;border-radius:17px;padding:14px}.note-icon{background:#c5f36a16;color:var(--lime);width:33px;height:33px;border-radius:11px;display:grid;place-items:center;flex-shrink:0;font-size:17px}.note strong{font-size:12px}.note p{font-size:12px;color:#bbc5b4;margin:4px 0 0}.quote{font-size:14px;font-weight:800;line-height:1.7}.subtle{color:var(--muted);font-size:12px}.page{display:none}.page.active{display:block}.field{display:grid;gap:6px;margin-bottom:14px}.field label{font-size:12px;color:var(--muted);font-weight:700}.field input,.field textarea,.field select,.command-input{width:100%;border:1px solid var(--line);background:#10140f;color:var(--text);padding:12px 13px;border-radius:13px;outline:none}.field textarea{min-height:80px;resize:vertical}.command-box{border:1px solid var(--line);background:#171d16;border-radius:19px;padding:13px;margin-top:13px}.command-box label{display:block;font-size:12px;font-weight:800;margin:0 0 8px}.command-row{display:flex;gap:8px}.command-row input{min-width:0;flex:1}.command-help{margin-top:8px;font-size:11px;color:var(--muted);line-height:1.8}.pill-row{display:flex;gap:7px;flex-wrap:wrap}.pill-btn{border:1px solid var(--line);border-radius:999px;padding:7px 10px;background:transparent;color:var(--muted);font-size:11px}.report-card{border:1px solid var(--line);border-radius:19px;background:var(--panel);padding:16px;margin-bottom:12px}.report-card h3{font-size:14px;margin:0 0 12px}.report-line{display:flex;justify-content:space-between;gap:15px;padding:9px 0;border-bottom:1px solid #ffffff0c;font-size:12px}.report-line:last-child{border:0}.report-line span{color:var(--muted)}.tabbar{position:fixed;z-index:5;bottom:0;left:0;right:0;padding:9px 12px calc(9px + env(safe-area-inset-bottom));background:#11150ff0;backdrop-filter:blur(18px);border-top:1px solid #ffffff12;display:flex;justify-content:center}.tab-inner{width:min(720px,100%);display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.tab{border:0;background:transparent;color:#9ba593;border-radius:13px;padding:8px 5px;font-size:11px;font-weight:750;display:flex;flex-direction:column;align-items:center;gap:4px}.tab .ico{font-size:19px;line-height:1.2}.tab.active{background:#26321f;color:var(--lime)}.foot{text-align:center;font-size:10px;color:#75806d;margin:25px 0 18px}.toast{position:fixed;left:16px;right:16px;bottom:calc(85px + env(safe-area-inset-bottom));z-index:20;margin:auto;max-width:500px;padding:13px 15px;border-radius:14px;background:#e3f4cc;color:#1c2913;box-shadow:var(--shadow);font-size:12px;font-weight:800;display:none}.toast.show{display:block;animation:rise .18s ease-out}@keyframes rise{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}dialog{width:min(92vw,480px);max-height:85dvh;overflow:auto;color:var(--text);background:#1b2119;border:1px solid #46513d;border-radius:22px;padding:20px;box-shadow:0 22px 80px #000a}dialog::backdrop{background:#060805bb;backdrop-filter:blur(5px)}.modal-title{font-size:18px;font-weight:900;margin:0 0 17px}.modal-actions{display:flex;gap:8px;margin-top:17px}.modal-actions button{flex:1}.rescue{border-color:#7b4936;background:linear-gradient(135deg,#2b201a,#1c1b16)}.rescue .eyebrow{color:var(--orange)}
+  @media(min-width:600px){.wrap{padding:28px 24px 0}.hero{padding:28px}.quick-grid{gap:12px}.quick{min-height:92px}.task{padding:17px}.tabbar{padding-top:12px}.hero h1{max-width:500px}}
+  @media(max-width:380px){.wrap{padding-left:12px;padding-right:12px}.hero{padding:19px}.hero-bottom{align-items:flex-start;flex-direction:column}.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.quick{min-height:65px;flex-direction:row;justify-content:flex-start;padding:10px}.quick .q-icon{flex-shrink:0}.quick strong{font-size:12px}.stats{gap:6px}.stat{padding:11px 9px}.stat .value{font-size:19px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div class="brand"><div class="mark">B.</div><div><div class="brand-name">BAHRAM OS</div><div class="brand-sub">PERSONAL COMMAND CENTER</div></div></div>
+      <div class="date-pill" id="datePill">امروز</div>
+    </header>
+
+    <main>
+      <section id="homePage" class="page active">
+        <div class="hero" id="heroCard">
+          <div class="eyebrow" id="heroEyebrow">یک روز دیگر برای جلو رفتن</div>
+          <h1 id="heroTitle">انگیزه منتظر نمی‌ماند.<br>قدم بعدی را بردار.</h1>
+          <p id="heroSub">برنامه قرار نیست کامل باشد؛ باید قابل اجرا باشد.</p>
+          <div class="hero-bottom">
+            <div style="flex:1;min-width:0;width:100%">
+              <div class="progress-copy"><b id="progressNum">۰٪</b><span id="progressText">هنوز شروع نکردی؛ یک کار را انتخاب کن.</span></div>
+              <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+            </div>
+            <button class="primary-btn" data-act="add-task">＋ کار جدید</button>
+          </div>
+        </div>
+
+        <div class="section-head"><h2>وضعیت امروز</h2><button class="ghost-btn" data-act="report" style="padding:5px 8px;font-size:11px">گزارش روز ←</button></div>
+        <div class="stats">
+          <div class="stat"><div class="label">کارهای تمام‌شده</div><div class="value" id="statDone">۰/۰</div><div class="sub">خروجی، نه فقط زمان</div></div>
+          <div class="stat"><div class="label">تمرین حرکت</div><div class="value" id="statMove">۰′</div><div class="sub">پیاده‌روی + ورزش</div></div>
+          <div class="stat"><div class="label">سیگار</div><div class="value" id="statCigs">۰</div><div class="sub">فقط ثبت، بدون قضاوت</div></div>
+        </div>
+
+        <div class="section-head"><h2>سه اولویت</h2><span id="capacityLabel">ساده شروع کن</span></div>
+        <div id="taskList" class="task-list"></div>
+        <div id="movedWrap"></div>
+
+        <div class="section-head"><h2>ثبت سریع</h2><span>یک ضربه، یک قدم</span></div>
+        <div class="quick-grid">
+          <button class="quick" data-act="armenian"><span class="q-icon">Ա</span><strong>تمرین ارمنی</strong><small id="armQuick">+۲۰ دقیقه</small></button>
+          <button class="quick" data-act="move"><span class="q-icon">↗</span><strong>حرکت / ورزش</strong><small id="moveQuick">+۱۰ دقیقه</small></button>
+          <button class="quick" data-act="cigarette"><span class="q-icon">＋</span><strong>ثبت سیگار</strong><small>شمارش واقعی</small></button>
+          <button class="quick" data-act="energy"><span class="q-icon">ϟ</span><strong>سطح انرژی</strong><small id="energyQuick">۵ از ۱۰</small></button>
+        </div>
+
+        <div class="section-head"><h2>برنامه تغییر کرد؟</h2></div>
+        <div class="note"><div class="note-icon">↻</div><div style="flex:1"><strong>برنامه را عوض کن، روز را دور نریز.</strong><p>قرار یا کار جدید اضافه کن، زمان آزاد را وارد کن؛ کارهای انجام‌شده حفظ می‌شوند و اولویت‌های باقی‌مانده دوباره مرتب می‌شوند.</p><div class="pill-row" style="margin-top:10px"><button class="pill-btn" data-act="capacity">وقت آزاد امروز</button><button class="pill-btn" data-act="block">ثبت قرار / محدودیت</button><button class="pill-btn" data-act="rescue">حالت نجات روز</button></div><p id="blockInfo" style="margin-top:8px"></p></div></div>
+        <div class="command-box"><label for="commandInput">یا خیلی ساده بنویس…</label><div class="command-row"><input id="commandInput" class="command-input" placeholder="مثلاً: امروز فقط ۹۰ دقیقه وقت دارم" autocomplete="off"><button class="primary-btn" data-act="run-command">ثبت</button></div><div class="command-help">نمونه‌ها: «کار جدید: تدوین ریلز»، «انجام شد: تمرین ارمنی»، «انرژی ۲ از ۱۰»، «وزنم ۱۰۲»، «ورزش کردم ۳۰ دقیقه»</div></div>
+      </section>
+
+      <section id="quickPage" class="page">
+        <div class="hero"><div class="eyebrow">QUICK CAPTURE</div><h1>از ذهنت بیرونش بیار.</h1><p>کارها و تغییرات را فوری ثبت کن؛ بعداً مرتب‌شان کن.</p></div>
+        <div class="command-box"><label for="commandInput2">پیام یا دستور معمولی</label><textarea id="commandInput2" class="command-input" style="min-height:104px;resize:vertical" placeholder="مثلاً: برنامه عوض شد، ۱۴ تا ۲۰:۳۰ بیرونم. امروز ۹۰ دقیقه وقت دارم."></textarea><button class="primary-btn" data-act="run-command-2" style="width:100%;margin-top:10px">ثبت و بازتنظیم</button><div class="command-help">اگر جمله‌ات با دستورهای شناخته‌شده تطبیق نکند، به‌عنوان کار تازه ذخیره می‌شود.</div></div>
+        <div class="section-head"><h2>دکمه‌های سریع</h2></div>
+        <div class="quick-grid">
+          <button class="quick" data-act="add-task"><span class="q-icon">＋</span><strong>کار جدید</strong><small>خروجی مشخص</small></button>
+          <button class="quick" data-act="capacity"><span class="q-icon">◷</span><strong>وقت آزاد</strong><small>بازچینی کارها</small></button>
+          <button class="quick" data-act="block"><span class="q-icon">▣</span><strong>قرار جدید</strong><small>زمان شلوغ</small></button>
+          <button class="quick" data-act="report"><span class="q-icon">▤</span><strong>گزارش روز</strong><small>پیشرفت واقعی</small></button>
+          <button class="quick" data-act="weight"><span class="q-icon">↓</span><strong>ثبت وزن</strong><small>بدون قضاوت</small></button>
+          <button class="quick" data-act="backup"><span class="q-icon">⇩</span><strong>پشتیبان داده</strong><small>خروجی JSON</small></button>
+        </div>
+        <div class="section-head"><h2>اصل کاری این برنامه</h2></div>
+        <div class="note"><div class="note-icon">●</div><div><strong>قرار نیست هر روز ۱۰ کار تمام کنی.</strong><p>هر روز یک خروجی درآمدزا، یک قدم برای توانایی آینده و یک قدم برای سلامت کافی است. روز سخت؟ حجم کار کم می‌شود، نه اینکه خودت را سرزنش کنی.</p></div></div>
+      </section>
+
+      <section id="reportPage" class="page">
+        <div class="hero"><div class="eyebrow">DAILY REVIEW</div><h1>واقعیت را ثبت کن.<br>از آن بهتر شو.</h1><p>گزارش از اطلاعاتی ساخته می‌شود که واقعاً ثبت کرده‌ای؛ جای خالی‌ها حدس زده نمی‌شوند.</p></div>
+        <div id="reportContent"></div>
+        <button class="primary-btn" data-act="copy-report" style="width:100%;margin:7px 0 10px">کپی گزارش روز</button>
+        <button class="secondary-btn" data-act="backup" style="width:100%">خروجی پشتیبان اطلاعات</button>
+        <div class="section-head"><h2>اطلاعات بلندمدت</h2></div>
+        <div class="report-card"><h3>وزن‌های ثبت‌شده</h3><div id="weightHistory" class="subtle">هنوز وزنی ثبت نشده.</div></div>
+        <div class="report-card"><h3>حریم خصوصی</h3><p class="subtle">اطلاعات در حافظهٔ همین مرورگر ذخیره می‌شود و به این وب‌سایت ارسال نمی‌شود. با پاک‌شدن داده‌های مرورگر ممکن است از دست برود؛ از «خروجی پشتیبان» استفاده کن.</p></div>
+      </section>
+    </main>
+    <div class="foot">کار واقعی. قدم‌های کوچک. پیشرفت قابل‌اندازه‌گیری.</div>
+  </div>
+
+  <nav class="tabbar" aria-label="منوی اصلی"><div class="tab-inner">
+    <button class="tab active" data-tab="home"><span class="ico">⌂</span>امروز</button>
+    <button class="tab" data-tab="quick"><span class="ico">＋</span>ثبت سریع</button>
+    <button class="tab" data-tab="report"><span class="ico">▤</span>گزارش</button>
+  </div></nav>
+  <div class="toast" id="toast" role="status"></div>
+
+  <dialog id="modal">
+    <form id="modalForm">
+      <h2 class="modal-title" id="modalTitle">کار جدید</h2>
+      <div id="modalBody"></div>
+      <div class="modal-actions"><button type="button" class="secondary-btn" data-act="close-modal">لغو</button><button type="submit" class="primary-btn">ذخیره</button></div>
+    </form>
+  </dialog>
+
+<script>
+(function(){
+  'use strict';
+  var KEY='bahram-os-mobile-v1';
+  var todayKey=getTodayKey();
+  var state=loadState();
+  var activePage='home';
+  var modalMode='task';
+  var toastTimer=null;
+  function getTodayKey(){
+    var ps=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Yerevan',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+    var o={};ps.forEach(function(p){o[p.type]=p.value;});return o.year+'-'+o.month+'-'+o.day;
+  }
+  function dateLabel(){return new Intl.DateTimeFormat('fa-IR',{timeZone:'Asia/Yerevan',weekday:'long',day:'numeric',month:'long'}).format(new Date());}
+  function uid(){return Math.random().toString(36).slice(2,10)+Date.now().toString(36);}
+  function makeTask(title,minutes,category,priority){return {id:uid(),title:title,minutes:minutes,category:category,priority:priority,done:false,carried:false,createdAt:Date.now()};}
+  function defaultTasks(){return [makeTask('خروجی درآمدزای امروز را جلو ببر',60,'کار و درآمد',1),makeTask('ارمنی: ۲۰ دقیقه شنیدن، تکرار و یادآوری',20,'زبان',2),makeTask('پیاده‌روی یا تمرین بدنی',20,'سلامت',3)];}
+  function newDay(unfinished){
+    var tasks=defaultTasks();
+    if(unfinished&&unfinished.length){
+      unfinished.forEach(function(t){var cp=Object.assign({},t,{id:uid(),done:false,carried:true,priority:Math.min(3,(t.priority||3))});tasks.unshift(cp);});
+    }
+    return {tasks:tasks,capacity:null,blockNote:'',energy:5,cigarettes:0,moveMins:0,armenianMins:0,weight:null,notes:[],focusMins:0,createdAt:Date.now()};
+  }
+  function loadState(){
+    var saved=null;
+    try{saved=JSON.parse(localStorage.getItem(KEY)||'null');}catch(e){}
+    if(!saved||!saved.days)saved={days:{},weights:[],version:1};
+    var keys=Object.keys(saved.days).sort();
+    if(!saved.days[todayKey]){
+      var unfinished=[];
+      if(keys.length){var prev=saved.days[keys[keys.length-1]];unfinished=(prev.tasks||[]).filter(function(t){return !t.done;}).slice(0,5);}
+      saved.days[todayKey]=newDay(unfinished);
+    }
+    var d=saved.days[todayKey];
+    if(!Array.isArray(d.tasks))d.tasks=defaultTasks();
+    if(!Array.isArray(d.notes))d.notes=[];
+    if(typeof d.energy!=='number')d.energy=5;
+    if(typeof d.cigarettes!=='number')d.cigarettes=0;
+    if(typeof d.moveMins!=='number')d.moveMins=0;
+    if(typeof d.armenianMins!=='number')d.armenianMins=0;
+    if(!Array.isArray(saved.weights))saved.weights=[];
+    return saved;
+  }
+  function day(){return state.days[todayKey];}
+  function persist(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){showToast('فضای ذخیره پر است؛ از اطلاعات پشتیبان بگیر.');}}
+  function fa(n){return Number(n).toLocaleString('fa-IR');}
+  function safe(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function normalizeDigits(s){return String(s).replace(/[۰-۹]/g,function(c){return String('۰۱۲۳۴۵۶۷۸۹'.indexOf(c));}).replace(/[٠-٩]/g,function(c){return String('٠١٢٣٤٥٦٧٨٩'.indexOf(c));}).replace(/\u200c/g,' ');}
+  function activeTasks(){return day().tasks.filter(function(t){return !t.done;}).sort(function(a,b){return (a.priority||3)-(b.priority||3)||a.createdAt-b.createdAt;});}
+  function focusTasks(){
+    var tasks=activeTasks(),cap=day().capacity;
+    if(!cap)return tasks.slice(0,3);
+    var fit=[],mins=0;
+    tasks.forEach(function(t){if(fit.length<3&&mins+t.minutes<=cap){fit.push(t);mins+=t.minutes;}});
+    if(!fit.length&&tasks.length)fit=[tasks[0]];
+    return fit;
+  }
+  function render(){
+    var d=day(),tasks=d.tasks,done=tasks.filter(function(t){return t.done;}).length;
+    document.getElementById('datePill').textContent=dateLabel();
+    document.getElementById('statDone').textContent=fa(done)+'/'+fa(tasks.length);
+    document.getElementById('statMove').textContent=fa(d.moveMins)+'′';
+    document.getElementById('statCigs').textContent=fa(d.cigarettes);
+    document.getElementById('energyQuick').textContent=fa(d.energy)+' از ۱۰';
+    document.getElementById('armQuick').textContent='+۲۰ دقیقه · '+fa(d.armenianMins)+' ثبت';
+    document.getElementById('moveQuick').textContent='+۱۰ دقیقه · '+fa(d.moveMins)+' ثبت';
+    var pct=tasks.length?Math.round(done/tasks.length*100):0;
+    document.getElementById('progressNum').textContent=fa(pct)+'٪';
+    document.getElementById('progressFill').style.width=pct+'%';
+    document.getElementById('progressText').textContent=done===0?'هنوز شروع نکردی؛ کوچک‌ترین قدم را بردار.':done===tasks.length?'فهرست امروز تمام شد. روز را ثبت کن.':fa(tasks.length-done)+' کار باقی مانده؛ یکی را کامل کن.';
+    var hero=document.getElementById('heroCard');
+    hero.classList.toggle('rescue',d.energy<=3);
+    document.getElementById('heroEyebrow').textContent=d.energy<=3?'حالت روز سخت · حداقل مؤثر':'یک روز دیگر برای جلو رفتن';
+    document.getElementById('heroTitle').innerHTML=d.energy<=3?'امروز فقط قدم بعدی.<br>نه قهرمان‌بازی.':'انگیزه منتظر نمی‌ماند.<br>قدم بعدی را بردار.';
+    document.getElementById('heroSub').textContent=d.energy<=3?'یک کار مهم، کمی حرکت، و تمام. امروز لازم نیست همه‌چیز را جبران کنی.':'برنامه قرار نیست کامل باشد؛ باید قابل اجرا باشد.';
+    document.getElementById('capacityLabel').textContent=d.capacity?('ظرفیت: '+fa(d.capacity)+' دقیقه'):'حداکثر سه کار اصلی';
+    document.getElementById('blockInfo').textContent=d.blockNote?'ثبت‌شده: '+d.blockNote:'';
+    var focus=focusTasks();
+    document.getElementById('taskList').innerHTML=focus.length?focus.map(taskHtml).join(''):'<div class="empty">همهٔ کارهای امروز تمام شده‌اند. گزارش بگیر یا کار جدیدی اضافه کن.</div>';
+    var left=activeTasks().filter(function(t){return focus.indexOf(t)<0;});
+    document.getElementById('movedWrap').innerHTML=left.length?'<details class="moved"><summary>بقیهٔ کارها / منتقل‌شده ('+fa(left.length)+')</summary>'+left.map(taskHtml).join('')+'</details>':'';
+    renderReport();
+  }
+  function taskHtml(t){
+    return '<article class="task '+(t.done?'done':'')+'" data-id="'+safe(t.id)+'"><button class="check" aria-label="'+(t.done?'بازگرداندن کار':'ثبت انجام')+'" data-act="toggle-task" data-id="'+safe(t.id)+'">'+(t.done?'✓':'')+'</button><div><div class="task-title">'+safe(t.title)+'</div><div class="task-meta"><span class="tag">'+safe(t.category||'عمومی')+'</span><span class="tag priority">'+(t.priority===1?'اولویت ۱':t.priority===2?'اولویت ۲':'اولویت ۳')+'</span>'+(t.carried?'<span class="tag carried">منتقل‌شده</span>':'')+'</div><div class="task-more"><button data-act="edit-task" data-id="'+safe(t.id)+'">ویرایش</button><button data-act="delete-task" data-id="'+safe(t.id)+'">حذف</button></div></div><div class="task-mins">'+fa(t.minutes)+' دقیقه</div></article>';
+  }
+  function showToast(msg){
+    var el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(function(){el.classList.remove('show');},3000);
+  }
+  function setPage(page){
+    activePage=page;
+    document.querySelectorAll('.page').forEach(function(el){el.classList.toggle('active',el.id===page+'Page');});
+    document.querySelectorAll('.tab').forEach(function(el){el.classList.toggle('active',el.getAttribute('data-tab')===page);});
+    if(page==='report')renderReport();
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  function taskById(id){return day().tasks.find(function(t){return t.id===id;});}
+  function toggleTask(id){var t=taskById(id);if(!t)return;t.done=!t.done;if(t.done){t.completedAt=Date.now();showToast('ثبت شد: '+t.title);}else{delete t.completedAt;showToast('کار به فهرست برگشت.');}persist();render();}
+  function openModal(mode,id){
+    modalMode=mode;
+    var modal=document.getElementById('modal'),body=document.getElementById('modalBody'),title=document.getElementById('modalTitle');
+    if(mode==='task'||mode==='edit'){
+      var t=id?taskById(id):null;title.textContent=t?'ویرایش کار':'کار جدید';
+      body.innerHTML='<div class="field"><label for="fTitle">خروجی دقیق</label><input id="fTitle" name="title" maxlength="130" required placeholder="مثلاً: انتخاب و کات ۱۰ شات اول" value="'+safe(t?t.title:'')+'"></div><div class="field"><label for="fMins">زمان تخمینی</label><select id="fMins" name="minutes">'+[10,15,20,25,30,45,60,90,120].map(function(m){return '<option value="'+m+'" '+((t?t.minutes:25)===m?'selected':'')+'>'+m+' دقیقه</option>';}).join('')+'</select></div><div class="field"><label for="fCat">حوزه</label><select id="fCat" name="category">'+['کار و درآمد','تدوین','جذب مشتری','زبان','سلامت','عکاسی','زندگی و مدیریت','سایر'].map(function(c){return '<option '+((t?t.category:'کار و درآمد')===c?'selected':'')+'>'+c+'</option>';}).join('')+'</select></div><div class="field"><label for="fPriority">اولویت</label><select id="fPriority" name="priority"><option value="1" '+((t?t.priority:1)===1?'selected':'')+'>۱ · مهم / ضرب‌الاجل</option><option value="2" '+((t?t.priority:2)===2?'selected':'')+'>۲ · پیشرفت</option><option value="3" '+((t?t.priority:3)===3?'selected':'')+'>۳ · اگر وقت ماند</option></select></div>';
+      document.getElementById('modalForm').dataset.editId=id||'';
+    }else if(mode==='capacity'){
+      title.textContent='چقدر وقت آزاد داری؟';body.innerHTML='<p class="subtle">فقط زمان آزاد واقعی برای کارهای شخصی/مهم را وارد کن. کارهای جا‌نشده حذف نمی‌شوند؛ به بخش بقیهٔ کارها می‌روند.</p><div class="field"><label for="fCapacity">زمان در دسترس</label><select name="capacity" id="fCapacity">'+[30,45,60,90,120,150,180,240,300,360].map(function(m){return '<option value="'+m+'" '+(day().capacity===m?'selected':'')+'>'+fa(m)+' دقیقه'+(m>=60?' ('+fa(Math.floor(m/60))+' ساعت'+(m%60?' و '+fa(m%60)+' دقیقه':'')+')':'')+'</option>';}).join('')+'</select></div><div class="field"><label for="fBlock">قرار یا محدودیت (اختیاری)</label><input id="fBlock" name="blockNote" value="'+safe(day().blockNote)+'" placeholder="مثلاً ۱۴ تا ۲۰:۳۰ بیرونم"></div>';
+    }else if(mode==='block'){
+      title.textContent='ثبت قرار یا تغییر برنامه';body.innerHTML='<div class="field"><label for="fBlock">چه چیزی تغییر کرده؟</label><textarea id="fBlock" name="blockNote" required placeholder="مثلاً: از ۱۴ تا ۲۰:۳۰ بیرونم؛ پروژه فوری فردا تحویل است.">'+safe(day().blockNote)+'</textarea></div><p class="subtle">کارهای تمام‌شده حفظ می‌شوند. این محدودیت ثبت می‌شود؛ اگر می‌خواهی زمان‌بندی دقیق‌تر شود، زمان آزاد را هم تعیین کن.</p>';
+    }else if(mode==='energy'){
+      title.textContent='سطح انرژی همین الان';body.innerHTML='<div class="field"><label for="fEnergy">از ۱ تا ۱۰</label><input id="fEnergy" name="energy" type="range" min="1" max="10" value="'+day().energy+'" oninput="document.getElementById(\\'energyVal\\').textContent=this.value"></div><div id="energyVal" style="font-size:24px;color:var(--lime);font-weight:900;text-align:center">'+fa(day().energy)+'</div><p class="subtle">۱ یعنی خیلی کم؛ ۱۰ یعنی آمادهٔ کار عمیق. پاسخ را واقعی بده، نه ایده‌آل.</p>';
+    }else if(mode==='move'){
+      title.textContent='ثبت حرکت یا ورزش';body.innerHTML='<div class="field"><label for="fMove">چند دقیقه؟</label><select name="minutes" id="fMove">'+[5,10,15,20,25,30,40,45,60,90].map(function(m){return '<option value="'+m+'" '+(m===20?'selected':'')+'>'+fa(m)+' دقیقه</option>';}).join('')+'</select></div><div class="field"><label for="fMoveType">نوع</label><select name="moveType" id="fMoveType"><option value="walk">پیاده‌روی</option><option value="workout">تمرین بدنی</option></select></div>';
+    }else if(mode==='armenian'){
+      title.textContent='ثبت تمرین زبان';body.innerHTML='<div class="field"><label for="fArm">چند دقیقه تمرین کردی؟</label><select name="minutes" id="fArm">'+[5,10,15,20,25,30,45,60].map(function(m){return '<option value="'+m+'" '+(m===20?'selected':'')+'>'+fa(m)+' دقیقه</option>';}).join('')+'</select></div><p class="subtle">بهترین ترکیب: شنیدن، تکرار با صدای بلند، و یادآوری بدون نگاه‌کردن.</p>';
+    }else if(mode==='weight'){
+      title.textContent='ثبت وزن';body.innerHTML='<div class="field"><label for="fWeight">وزن به کیلوگرم</label><input id="fWeight" name="weight" inputmode="decimal" required placeholder="مثلاً ۱۰۲٫۵" value="'+(day().weight||'')+'"></div><p class="subtle">یک عدد ثبت می‌شود؛ یک روز به‌تنهایی روند را مشخص نمی‌کند.</p>';
+    }
+    modal.showModal();
+  }
+  document.getElementById('modalForm').addEventListener('submit',function(e){
+    e.preventDefault();var fd=new FormData(e.currentTarget),d=day();
+    if(modalMode==='task'||modalMode==='edit'){
+      var title=String(fd.get('title')||'').trim();if(!title)return;
+      var id=e.currentTarget.dataset.editId,t=id?taskById(id):null;
+      if(t){t.title=title;t.minutes=Number(fd.get('minutes'));t.category=String(fd.get('category'));t.priority=Number(fd.get('priority'));showToast('کار ویرایش شد.');}
+      else{d.tasks.push(makeTask(title,Number(fd.get('minutes')),String(fd.get('category')),Number(fd.get('priority'))));showToast('کار اضافه شد. قدم اولش را انجام بده.');}
+    }else if(modalMode==='capacity'){
+      d.capacity=Number(fd.get('capacity'));d.blockNote=String(fd.get('blockNote')||'').trim();showToast('برنامه با ظرفیت جدید مرتب شد؛ کارها حذف نشدند.');
+    }else if(modalMode==='block'){
+      d.blockNote=String(fd.get('blockNote')||'').trim();d.notes.push({time:Date.now(),text:'تغییر برنامه: '+d.blockNote});showToast('تغییر ثبت شد. کارهای انجام‌شده سر جایشان ماندند.');
+    }else if(modalMode==='energy'){
+      d.energy=Number(fd.get('energy'));showToast(d.energy<=3?'حالت نجات فعال شد؛ امروز فقط کارهای ضروری.':'سطح انرژی ثبت شد.');
+    }else if(modalMode==='move'){
+      var m=Number(fd.get('minutes'));d.moveMins+=m;d.notes.push({time:Date.now(),text:(fd.get('moveType')==='walk'?'پیاده‌روی ':'ورزش ')+m+' دقیقه'});showToast('حرکت ثبت شد؛ '+fa(m)+' دقیقه به سابقه اضافه شد.');
+    }else if(modalMode==='armenian'){
+      var am=Number(fd.get('minutes'));d.armenianMins+=am;d.notes.push({time:Date.now(),text:'تمرین ارمنی '+am+' دقیقه'});showToast('تمرین زبان ثبت شد.');
+    }else if(modalMode==='weight'){
+      var w=Number(normalizeDigits(fd.get('weight')).replace(',','.'));if(!w||w<20||w>350){showToast('وزن را به کیلوگرم وارد کن.');return;}
+      d.weight=w;state.weights.push({date:todayKey,weight:w});showToast('وزن ثبت شد؛ روی روند تمرکز کن، نه یک عدد.');
+    }
+    persist();document.getElementById('modal').close();render();
+  });
+  function runCommand(raw){
+    var text=String(raw||'').trim();if(!text){showToast('یک جمله یا کار بنویس.');return;}
+    var n=normalizeDigits(text),d=day(),low=n.toLowerCase();
+    if(/^(کار جدید|اضافه کن|یادم باشه|یادآوری)\s*[:：]?\s*/.test(n)){
+      var title=n.replace(/^(کار جدید|اضافه کن|یادم باشه|یادآوری)\s*[:：]?\s*/,'').trim();
+      if(!title){openModal('task');return;}d.tasks.push(makeTask(title,25,'سایر',2));showToast('ثبت شد. تخمین را در صورت نیاز ویرایش کن.');
+    }else if(/^انجام شد\s*[:：]?\s*/.test(n)){
+      var q=n.replace(/^انجام شد\s*[:：]?\s*/,'').trim();
+      var hit=d.tasks.find(function(t){return !t.done&&(t.title.toLowerCase().indexOf(q.toLowerCase())>=0||q.toLowerCase().indexOf(t.title.toLowerCase())>=0);});
+      if(hit){hit.done=true;hit.completedAt=Date.now();showToast('به‌عنوان انجام‌شده ثبت شد: '+hit.title);}else{showToast('کار مشابه پیدا نشد؛ از دکمهٔ کنار خود کار استفاده کن.');}
+    }else if(/انرژی/.test(n)){
+      var en=n.match(/(\d+)\s*(?:از\s*10)?/);if(en){d.energy=Math.max(1,Math.min(10,Number(en[1])));showToast(d.energy<=3?'حالت نجات: فقط یک کار مهم و کمی حرکت.':'انرژی ثبت شد.');}else{openModal('energy');}
+    }else if(/وزن/.test(n)){
+      var wm=n.match(/(\d+(?:\.\d+)?)/);if(wm){var w=Number(wm[1]);if(w>=20&&w<=350){d.weight=w;state.weights.push({date:todayKey,weight:w});showToast('وزن ثبت شد.');}else{openModal('weight');}}else{openModal('weight');}
+    }else if(/ورزش|پیاده.?رو/.test(n)){
+      var mm=n.match(/(\d+)\s*(?:دقیقه|min)/);if(mm){d.moveMins+=Number(mm[1]);d.notes.push({time:Date.now(),text:'حرکت '+mm[1]+' دقیقه'});showToast('حرکت ثبت شد.');}else{openModal('move');}
+    }else if(/ارمنی|زبان/.test(n)&&/دقیقه|تمرین|کردم/.test(n)){
+      var lm=n.match(/(\d+)\s*(?:دقیقه|min)/);var mins=lm?Number(lm[1]):20;d.armenianMins+=mins;d.notes.push({time:Date.now(),text:'تمرین زبان '+mins+' دقیقه'});showToast('تمرین زبان ثبت شد.');
+    }else if(/سیگار/.test(n)){
+      var cm=n.match(/(\d+)/);if(/کمتر|منفی|حذف/.test(n)){d.cigarettes=Math.max(0,d.cigarettes-1);showToast('یک عدد از شمارش امروز کم شد.');}else{d.cigarettes+=cm?Math.max(1,Number(cm[1])):1;showToast('تعداد سیگار ثبت شد؛ هدف فعلاً ثبت دقیق است، نه قضاوت.');}
+    }else if(/(?:وقت|زمان).*(?:دارم|مانده|آزاد)|فقط\s*\d+\s*(?:دقیقه|ساعت)/.test(n)&&/دقیقه|ساعت/.test(n)){
+      var cap=n.match(/(\d+)\s*(دقیقه|ساعت)/);if(cap){d.capacity=Number(cap[1])*(cap[2]==='ساعت'?60:1);showToast('زمان آزاد ثبت شد؛ اولویت‌ها بازچینی شدند و کاری حذف نشد.');}else{openModal('capacity');}
+    }else if(/برنامه.*عوض|بیرونم|جلسه دارم|قرار دارم|سرکارم|مشغولم/.test(n)){
+      d.blockNote=text;d.notes.push({time:Date.now(),text:'تغییر برنامه: '+text});
+      var found=n.match(/(\d{1,2}(?::\d{2})?)\s*(?:تا|-)\s*(\d{1,2}(?::\d{2})?)/);
+      if(found){showToast('بازهٔ زمانی ثبت شد. برای بازچینی دقیق، وقت آزاد باقی‌مانده را هم بنویس.');}
+      else{showToast('تغییر ثبت شد. کارهای انجام‌شده حفظ شدند.');}
+    }else if(/گزارش|روز رو ببند|مرور امروز/.test(n)){
+      d.notes.push({time:Date.now(),text:'درخواست مرور روز'});persist();render();setPage('report');showToast('گزارش واقعی امروز آماده است.');document.getElementById('commandInput').value='';document.getElementById('commandInput2').value='';return;
+    }else{
+      d.tasks.push(makeTask(text,25,'سایر',2));showToast('به‌عنوان کار جدید ثبت شد؛ اگر لازم است زمان و اولویتش را ویرایش کن.');
+    }
+    persist();render();document.getElementById('commandInput').value='';document.getElementById('commandInput2').value='';
+  }
+  function renderReport(){
+    var d=day(),done=d.tasks.filter(function(t){return t.done;}),pending=d.tasks.filter(function(t){return !t.done;});
+    var lines=[
+      ['تاریخ',dateLabel()],
+      ['کارهای تمام‌شده',fa(done.length)+' از '+fa(d.tasks.length)],
+      ['زمان تمرین حرکت',fa(d.moveMins)+' دقیقه'],
+      ['تمرین ارمنی',fa(d.armenianMins)+' دقیقه'],
+      ['تعداد سیگار ثبت‌شده',fa(d.cigarettes)],
+      ['سطح انرژی',fa(d.energy)+' از ۱۰'],
+      ['وزن امروز',d.weight?fa(d.weight)+' کیلوگرم':'ثبت نشده'],
+      ['زمان آزاد تعیین‌شده',d.capacity?fa(d.capacity)+' دقیقه':'تعیین نشده'],
+      ['قرار / محدودیت',d.blockNote||'ثبت نشده']
+    ];
+    document.getElementById('reportContent').innerHTML='<div class="report-card"><h3>جمع‌بندی امروز</h3>'+lines.map(function(x){return '<div class="report-line"><span>'+safe(x[0])+'</span><strong>'+safe(x[1])+'</strong></div>';}).join('')+'</div><div class="report-card"><h3>کارهای تمام‌شده</h3>'+(done.length?done.map(function(t){return '<div class="report-line"><span>'+safe(t.title)+'</span><strong>'+fa(t.minutes)+' دقیقه</strong></div>';}).join(''):'<p class="subtle">هنوز موردی علامت نخورده است. فقط کارهای واقعاً انجام‌شده را ثبت کن.</p>')+'</div><div class="report-card"><h3>کارهای باقی‌مانده</h3>'+(pending.length?pending.map(function(t){return '<div class="report-line"><span>'+safe(t.title)+'</span><strong>'+fa(t.minutes)+' دقیقه</strong></div>';}).join(''):'<p class="subtle">کار ناتمامی در فهرست نیست.</p>')+'</div><div class="report-card"><h3>یادداشت تغییرات</h3>'+(d.notes.length?d.notes.slice(-12).reverse().map(function(n){return '<div class="report-line"><span>'+safe(n.text)+'</span><strong>'+new Intl.DateTimeFormat('fa-IR',{timeZone:'Asia/Yerevan',hour:'2-digit',minute:'2-digit'}).format(new Date(n.time))+'</strong></div>';}).join(''):'<p class="subtle">هنوز یادداشتی ثبت نشده.</p>')+'</div>';
+    var weights=state.weights.slice(-10).reverse();
+    document.getElementById('weightHistory').innerHTML=weights.length?weights.map(function(w){return '<div class="report-line"><span>'+safe(w.date)+'</span><strong>'+fa(w.weight)+' کیلوگرم</strong></div>';}).join(''):'هنوز وزنی ثبت نشده.';
+  }
+  function copyReport(){
+    var d=day(),done=d.tasks.filter(function(t){return t.done;}),pending=d.tasks.filter(function(t){return !t.done;});
+    var text='گزارش BAHRAM OS — '+todayKey+'\nکار تمام‌شده: '+done.length+'/'+d.tasks.length+'\n'+done.map(function(t){return '✓ '+t.title;}).join('\n')+'\nباقی‌مانده:\n'+pending.map(function(t){return '• '+t.title;}).join('\n')+'\nحرکت: '+d.moveMins+' دقیقه\nارمنی: '+d.armenianMins+' دقیقه\nسیگار: '+d.cigarettes+'\nانرژی: '+d.energy+'/10\nوزن: '+(d.weight||'ثبت نشده')+'\nقرار/محدودیت: '+(d.blockNote||'ثبت نشده')+'\n';
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){showToast('گزارش کپی شد.');}).catch(function(){fallbackCopy(text);});}else fallbackCopy(text);
+  }
+  function fallbackCopy(text){var ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');showToast('گزارش کپی شد.');}catch(e){showToast('کپی خودکار ممکن نشد؛ از خروجی پشتیبان استفاده کن.');}ta.remove();}
+  function backup(){
+    var blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='bahram-os-backup-'+todayKey+'.json';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);showToast('فایل پشتیبان آماده شد.');
+  }
+  function rescue(){
+    var d=day();d.energy=Math.min(d.energy,3);
+    var pending=activeTasks();pending.sort(function(a,b){return (a.priority||3)-(b.priority||3);});
+    var first=pending[0];
+    if(first){first.priority=1;first.minutes=Math.min(first.minutes,25);}
+    d.capacity=30;d.notes.push({time:Date.now(),text:'حالت نجات روز فعال شد'});
+    persist();render();showToast('حالت نجات: فقط یک قدم مهم + حداقل حرکت. باقی کارها حذف نمی‌شوند.');
+  }
+  document.addEventListener('click',function(e){
+    var tab=e.target.closest('[data-tab]');if(tab){setPage(tab.getAttribute('data-tab'));return;}
+    var el=e.target.closest('[data-act]');if(!el)return;
+    var act=el.getAttribute('data-act'),id=el.getAttribute('data-id');
+    if(act==='add-task')openModal('task');
+    else if(act==='edit-task')openModal('edit',id);
+    else if(act==='toggle-task')toggleTask(id);
+    else if(act==='delete-task'){var t=taskById(id);if(t&&confirm('این کار از فهرست امروز حذف شود؟')){day().tasks=day().tasks.filter(function(x){return x.id!==id;});persist();render();showToast('کار حذف شد.');}}
+    else if(act==='capacity')openModal('capacity');
+    else if(act==='block')openModal('block');
+    else if(act==='energy')openModal('energy');
+    else if(act==='move')openModal('move');
+    else if(act==='armenian')openModal('armenian');
+    else if(act==='weight')openModal('weight');
+    else if(act==='cigarette'){day().cigarettes++;day().notes.push({time:Date.now(),text:'ثبت سیگار'});persist();render();showToast('ثبت شد؛ امروز '+fa(day().cigarettes)+' عدد ثبت کرده‌ای.');}
+    else if(act==='report'){setPage('report');}
+    else if(act==='copy-report')copyReport();
+    else if(act==='backup')backup();
+    else if(act==='rescue')rescue();
+    else if(act==='run-command')runCommand(document.getElementById('commandInput').value);
+    else if(act==='run-command-2')runCommand(document.getElementById('commandInput2').value);
+    else if(act==='close-modal')document.getElementById('modal').close();
+  });
+  document.getElementById('commandInput').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();runCommand(this.value);}});
+  document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)this.close();});
+  window.addEventListener('storage',function(e){if(e.key===KEY){state=loadState();render();}});
+  persist();render();
+  if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('./sw.js').catch(function(){});});}
+})();
+</script>
+</body>
+</html>
